@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5 Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/e15d7eb936.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weatherApp">
+       <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="weatherSummary">
+          <h1 id="city">Paris, France</h1>
+          <div class="weatherDetails" id="date"></div>
+          <div class="weatherDetails" id="description">Mostly cloudy</div>
+        </div>
+        <br />  
+          <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="weatherTemp" id="temperature">13</span>
+              <span class="weatherUnit">°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="day">Mon</div>
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <div class="temp">20°C</div>
+          </div>
+          <div class="col-sm-2">
+            <div class="day">Tue</div>
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <div class="temp">21°C</div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="day">Wed</div>
+            <i class="fa-regular fa-sun"></i>
+            <div class="temp">22°C</div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="day">Thu</div>
+            <i class="fa-regular fa-sun"></i>
+            <div class="temp">23°C</div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="day">Fri</div>
+            <i class="fa-regular fa-sun"></i>
+            <div class="temp">24°C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
